@@ -4,12 +4,13 @@ import {
   AppstoreOutlined,
   ContainerOutlined,
   DesktopOutlined,
-  PieChartOutlined
+  PieChartOutlined,
+  MenuOutlined
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 
-const SideNavBar = () => {
+const SideNavBar = ({ expand,toggleexpanded}) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const items = [
@@ -54,19 +55,31 @@ const SideNavBar = () => {
       icon: <AppstoreOutlined />,
       label: <Link to="/dashboard/support">Support</Link>
     },
-       {
+    {
       key: "6",
       icon: <AppstoreOutlined />,
       label: <Link to="/dashboard/support">Home</Link>
     }
   ];
   return (
-    <div className="side-nav-bar-container">
+//     <div className={ "side-nav-bar-container"   style={{ width: expand ? "20%" : "50%", transition: "width 0.3s ease" }}
+// }><div
+//   <div className={`side-nav-bar-container ${expand? "collapsed" : "expand"}`}
+//   // style={{ width: expand ? "20%" : "50%", transition: "width 0.3s ease",  }}
+// >
+  // <div className={`side-nav-bar-container`}>
+  <div className={`side-nav-bar-container ${expand ? "expand" : "collapsed"}`}>
+
       <div className="side-nav-logo-container">
         <div className="logo-row">
-          <span className="logo-icon">{/* icon */}</span>
+          <span className="logo-icon">{/* icon */} </span>
           {!collapsed && <div className="logo-title">Botho Admin</div>}
+          <div className="hamburger-menu">
+            <MenuOutlined  onClick={toggleexpanded}/>
+
+          </div>
         </div>
+
       </div>
 
       <div className="side-nav-menu-wrapper">
@@ -82,4 +95,4 @@ const SideNavBar = () => {
   );
 };
 
-export default SideNavBar;
+export default SideNavBar
