@@ -103,7 +103,8 @@ const Login = () => {
   const [login, setLogin] = useState(true);
 
   const handleSubmit = () => {
-    navigate("/dashboard/reports");
+    // navigate("/dashboard/reports");
+    navigate("/dashboard")
   };
 
   return (
