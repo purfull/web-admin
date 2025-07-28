@@ -4,15 +4,15 @@
 }
 .console-sidebar {
   position: absolute;
-  height: 100svh;
+  height: 100vh;
   top: 0;
   left: 0;
 }
-/* absolute right-0 top-[10vh] w-[80%] p-6 */
-.outlet-container {
-  position: absolute;
-  padding: 6px;
-  right: 0;
-  top: 10vh;
-  width: 80%;
-}
+
+/* .outlet-containerr {
+  position: absolute !important;
+  padding: 6px !important;
+  right: 0 !important;
+  top: 10vh !important;
+  width: 80% !important;
+} */
