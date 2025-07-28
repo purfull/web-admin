@@ -10,7 +10,7 @@ const Console = () => {
                 
                 <SideNavBar />
             </div>
-            <div className="absolute right-0 top-[10vh] w-[80%] p-6">
+            <div className="outlet-container">
                 <Outlet />
 
             </div>
