@@ -16,14 +16,13 @@ const CustomTable = ({ columns, data, addButtonClick }) => {
   };
   return (
     <div className="bg-white w-full my-shadow ">
-      <div className="py-6 flex justify-between px-8">
-        <div className="flex items-center">
-          <span className="heading-2 mr-4">show</span>
+      <div className="table-toolbar">
+        <div className="toolbar-left">
+          <span className="heading-2">Show</span>
           <Select
             value={pageSize}
             onChange={handleChange}
-            style={{ width: 60 }}
-            dropdownStyle={{ minWidth: 60 }}
+            className="toolbar-select"
           >
             <Option value={10}>10</Option>
             <Option value={25}>25</Option>
@@ -31,12 +30,10 @@ const CustomTable = ({ columns, data, addButtonClick }) => {
             <Option value={100}>100</Option>
           </Select>
         </div>
-        <div className="flex">
-          <div className=" h-full mr-6">
-            <Input placeholder="Search" className="w-[40vw] !py-[6px]" />
-          </div>
 
-          <button className="primary-button font-medium " onClick={handleAdd}>
+        <div className="toolbar-right">
+          <Input placeholder="Search" className="toolbar-search" />
+          <button className="primary-button font-medium" onClick={handleAdd}>
             + Add New
           </button>
         </div>

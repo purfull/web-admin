@@ -4,25 +4,31 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 const Console = () => {
-      const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(false);
 
   const toggleexpanded = () => {
     setExpand(!expand);
   };
-    return ( 
-        <div className="console-container">
-            <NavBar />
-            <div className={`console-sidebar  ${expand ? "expand" : "collapsed"}`}>
-                
-                      <SideNavBar expand={expand} toggleexpanded={toggleexpanded} />
+  return (
+    <div className="console-container">
+      <NavBar />
+      <div className={`console-sidebar  ${expand ? "expand" : "collapsed"}`}>
+        <SideNavBar expand={expand} toggleexpanded={toggleexpanded} />
+      </div>
+      <div
+        className="outlet-containerr"
+        style={{
+          position: "absolute",
+          padding: "6px",
+          right: 0,
+          top: "10vh",
+          width: "80%",
+        }}
+      >
+        <Outlet />
+      </div>
+    </div>
+  );
+};
 
-            </div>
-            <div className="outlet-container">
-                <Outlet />
-
-            </div>
-         </div>
-     );
-}
- 
 export default Console;
