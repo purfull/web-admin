@@ -1,40 +1,205 @@
-.ant-table-thead .ant-table-cell {
-  background-color: var(--body-color) !important;
-  color: var(--primary-text-color) !important;
-  font-size: medium !important;
-  font-weight: 500 !important;
+/* Global Styles */
+
+.heading-2 {
+  color: #3a3a3a;
+  font-weight: 600;
+  font-size: 16px;
+  padding-right: 0.5rem;
 }
 
-.ant-table-row .ant-table-cell {
-  color: var(--secondary-text-color) !important;
-
-  font-weight: 500;
-}
-
-.ant-select-selector .ant-select-selection-item {
-  color: var(--primary-text-color);
-}
-.ant-table-pagination {
-  margin-right: 32px !important;
-  font-weight: 500 !important;
-}
-.ant-pagination-next > button,
-.ant-pagination-prev > button {
-  border-radius: 50% !important;
-}
-.ant-pagination-item {
-  /* border-color: var(--primary-color) !important; */
-  color: var(--secondary-text-color) !important;
-  background-color: var(--body-color) !important;
-  border-radius: 50%;
-}
-
-/* .ant-pagination-item-active {
-  a {
-    color: var(--white) !important;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .table-toolbar {
+    flex-direction: column;
+    /* align-items: stretch; */
+    padding: 16px;
   }
-  border-color: var(--primary-color) !important;
-  background-color: var(--primary-color) !important;
-  border-radius: 50%;
-  box-shadow: var(--primary-shadow);
-} */
+
+  .toolbar-left {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding-top: 5px;
+  }
+
+  /* .toolbar-search,
+  .toolbar-select,
+  .primary-button {
+    width: 100%;
+  } */
+
+  .heading-2 {
+    font-size: 14px;
+  }
+
+  .toolbar-search {
+    width: 20vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .toolbar-search {
+    width: 20vw;
+  }
+
+  .table-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    padding: 24px 32px;
+  }
+
+  .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-right: 40px;
+  }
+
+  .toolbar-select {
+    width: 60px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .toolbar-search {
+    width: 20vw;
+  }
+
+  .table-toolbar {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    padding: 24px 32px;
+  }
+
+  .toolbar-right {
+    gap: 10px;
+    padding-right: 50px;
+  }
+  .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 32px;
+  }
+
+  .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar-search {
+    padding: 6px 11px;
+    min-width: 160px;
+  }
+
+  .toolbar-select {
+    width: 60px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .toolbar-search {
+    width: 20vw;
+  }
+  .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 32px;
+  }
+
+  .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar-search {
+    padding: 6px 11px;
+    min-width: 160px;
+  }
+
+  .toolbar-select {
+    width: 60px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .toolbar-search {
+    width: 20vw;
+  }
+  .table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 32px;
+  }
+
+  .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar-search {
+    padding: 6px 11px;
+    min-width: 160px;
+  }
+
+  .toolbar-select {
+    width: 60px;
+  }
+}
