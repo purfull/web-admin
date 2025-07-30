@@ -195,7 +195,9 @@ const NavBar = () => {
           <Avatar shape="circle" icon={<UserOutlined />} />
           <div className="message-details">
             <div className="message-title">New Message</div>
-            <div className="message-body">You have 4 new messages from Natalie</div>
+            <div className="message-body">
+              You have 4 new messages from Natalie
+            </div>
             <div className="message-time">1 hour ago</div>
           </div>
         </div>
@@ -209,18 +211,32 @@ const NavBar = () => {
       {isSearch ? (
         <Input allowClear onClear={handleSearch} onBlur={handleSearch} />
       ) : (
-        <div className="main-sidebar" style={{padding: "0 25px"}}>
-          <div className="search-bar-container" onClick={() => setIsSearch(true)}>
+        <div className="main-sidebar" style={{ padding: "0px 25px" }}>
+          <div
+            className="search-bar-container"
+            onClick={() => setIsSearch(true)}
+          >
             <SearchOutlined style={{ fontSize: "20px" }} />
             <span className="search-text">Search (Ctrl+/)</span>
           </div>
           <div className="avatar-container">
-            <Dropdown menu={{ items: itemsToRender }} trigger={["hover"]} placement="bottomRight">
+            <Dropdown
+              menu={{ items: itemsToRender }}
+              trigger={["hover"]}
+              placement="bottomRight"
+            >
               <Badge dot color="red">
-                <BellOutlined className="bell-icon" style={{ fontSize: "20px" }} />
+                <BellOutlined
+                  className="bell-icon"
+                  style={{ fontSize: "20px" }}
+                />
               </Badge>
             </Dropdown>
-            <Dropdown menu={{ items }} trigger={["click"]} placement="bottomRight">
+            <Dropdown
+              menu={{ items }}
+              trigger={["click"]}
+              placement="bottomRight"
+            >
               <Badge dot color="green">
                 <Avatar shape="circle" icon={<UserOutlined />} />
               </Badge>

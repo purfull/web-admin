@@ -10,23 +10,28 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .table-toolbar {
-    flex-direction: column;
-    /* align-items: stretch; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     padding: 16px;
+    width: 100%;
+    gap: 20px;
   }
 
   .toolbar-left {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: flex-start;
   }
 
   .toolbar-right {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    width: 100%;
-    gap: 20px;
-    padding-top: 5px;
+    width: 70%;
+    gap: 10px;
+    /* padding-top: 5px; */
   }
 
   /* .toolbar-search,
@@ -45,7 +50,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 600px) {
   .toolbar-search {
     width: 20vw;
   }
@@ -55,9 +60,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
-    gap: 10px;
+    gap: 20px;
     padding: 24px 32px;
   }
 
@@ -65,14 +70,16 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 30%;
+    justify-content: flex-start;
   }
 
   .toolbar-right {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     gap: 10px;
-    flex-wrap: wrap;
     padding-right: 40px;
+    width: 70%;
   }
 
   .toolbar-select {
@@ -81,43 +88,33 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .toolbar-search {
-    width: 20vw;
-  }
-
-  .table-toolbar {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 10px;
-    padding: 24px 32px;
-  }
-
-  .toolbar-right {
-    gap: 10px;
-    padding-right: 50px;
-  }
+@media only screen and (min-width: 768px) {
   .table-toolbar {
     display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%;
     padding: 24px 32px;
+    gap: 16px;
   }
 
   .toolbar-left {
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 30%; /* or flex: 1; */
+    min-width: 200px;
+    justify-content: flex-start;
   }
 
   .toolbar-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 16px;
-    flex-wrap: wrap;
+    width: 70%; /* or flex: 2; */
   }
 
   .toolbar-search {
@@ -131,7 +128,7 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) {
   .toolbar-search {
     width: 20vw;
   }
@@ -139,22 +136,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 16px;
     padding: 24px 32px;
+    width: 100%;
   }
 
   .toolbar-left {
     display: flex;
     align-items: center;
     gap: 12px;
+    justify-content: flex-start;
+    width: 30%;
   }
 
   .toolbar-right {
     display: flex;
     align-items: center;
     gap: 16px;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 70%;
   }
 
   .toolbar-search {
@@ -176,7 +177,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 16px;
     padding: 24px 32px;
   }
