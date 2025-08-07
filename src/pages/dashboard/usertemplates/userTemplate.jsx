@@ -7,6 +7,24 @@ import "./userTemplate.css";
 
 const TemplateMainPage = () => {
   const [newPage, setNewPage] = useState(false);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts?_page")
+      .then((res) => res.json())
+      .then((data) => {
+        const dummyData = data.map((item) => ({
+          key: item.id,
+          name: item.title,
+          status: "Active",
+          lastUpdated: "05-08-25",
+          action: "View",
+        }));
+        setUsers(dummyData);
+      })
+      .catch((e) => console.log("error", e));
+  }, []);
+
   // Define columns
   useEffect(() => {
     console.log(newPage);
@@ -162,8 +180,10 @@ const TemplateMainPage = () => {
         <div className="table-wrapper">
           <CustomTable
             columns={columns}
+            data={users}
             addButtonClick={handleAdd}
-            // data={data}
+            //data={data}
+            // onChange={setPageSize}
           />
         </div>
       )}

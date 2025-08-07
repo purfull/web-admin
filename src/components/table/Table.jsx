@@ -11,6 +11,10 @@ const CustomTable = ({ columns, data, addButtonClick }) => {
     if (onChange) onChange(value);
   };
 
+  // const handleChange = (value) => {
+  //   setPageSize(value);
+  // };
+
   const handleAdd = () => {
     addButtonClick({ newPage: true });
   };
